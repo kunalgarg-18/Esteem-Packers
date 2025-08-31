@@ -30,16 +30,16 @@ const EnquirySection: React.FC = () => (
                       Select Product Type
                     </option>
                     <option value="single" className="text-gray-900">
-                      Single Wall Corrugated
+                      Brown Corrugated Carton Box
                     </option>
                     <option value="double" className="text-gray-900">
-                      Double Wall Corrugated
+                      Carton Box
                     </option>
                     <option value="triple" className="text-gray-900">
-                      Triple Wall Corrugated
+                      Corrugated Box
                     </option>
                     <option value="custom" className="text-gray-900">
-                      Custom Die-Cut Sheets
+                      Packaging Box
                     </option>
                   </select>
                 </div>
@@ -161,7 +161,13 @@ const EnquirySection: React.FC = () => (
 
                 <button
                   type="button"
-                  className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold text-lg"
+                  className="w-full cursor-pointer bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold text-lg"
+                  onClick={() => {
+                    window.open(
+                      "https://wa.me/917505271939?text=Hi%20Esteem%20Packers%2C%20I%20would%20like%20an%20instant%20quote%20for%20corrugated%20packaging.",
+                      "_blank"
+                    );
+                  }}
                 >
                   Get Instant Quote
                 </button>

@@ -10,6 +10,14 @@ type Props = {
   MapPin: React.ComponentType<IconProps>;
 };
 
+const Instagram = ({ className = "w-6 h-6" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <rect width="20" height="20" x="2" y="2" rx="5" />
+    <circle cx="12" cy="12" r="5" />
+    <circle cx="17" cy="7" r="1.5" />
+  </svg>
+);
+
 const ContactSection: React.FC<Props> = ({ Phone, Mail, MapPin }) => (
   // ...copy the full JSX from your App.tsx for ContactSection here...
   <section id="contact" className="py-20 bg-gray-900 text-white">
@@ -40,7 +48,24 @@ const ContactSection: React.FC<Props> = ({ Phone, Mail, MapPin }) => (
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <p className="text-gray-300">esteeempackers@gmail.com</p>
+              <p className="text-gray-300">esteempackers@gmail.com</p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-4">
+            <div className="bg-blue-600 rounded-lg p-3">
+              <Instagram className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Instagram</h3>
+              <a
+                href="https://www.instagram.com/esteempackerspvt.ltd?igsh=MXYzcmNhaXVnbXp0eQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:underline"
+              >
+                @esteempackerspvtltd
+              </a>
             </div>
           </div>
 

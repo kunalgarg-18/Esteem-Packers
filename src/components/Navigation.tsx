@@ -66,6 +66,7 @@ const NavigationLinks: React.FC<NavigationLinksProps> = ({
   </>
 );
 
+const logoUrl = "https://res.cloudinary.com/df6yjgcmv/image/upload/c_crop,w_550,h_300/v1756637587/esteempackerslogo_orqay0.png"
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //@ts-ignore
@@ -75,8 +76,15 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-            Esteem Packers
+          <div className="flex items-center space-x-3">
+            <img
+              src={logoUrl}
+              alt="Esteem Packers Logo"
+              className="h-7 object-contain"
+            />
+            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              Esteem Packers
+            </span>
           </div>
           <div className="hidden md:flex space-x-8">
             <NavigationLinks setActiveSection={setActiveSection} />
